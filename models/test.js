@@ -1,21 +1,27 @@
 const mongoose = require('mongoose')
 
-const Turtle = mongoose.model('Turtle', {
-    name: {
+const Test = mongoose.model('Test', {
+    question: {
         type: String,
-        required: true,
-        trim: true
+        required: true
     },
-    type: {
+    answer1: {
         type: String,
-        default: false,
         required: true,
     },
-    image: {
+    answer2: {
         type: String,
         required: true,
-        trim: true
-    }
+    },
+    answer3: {
+        type: String,
+        required: true,
+    },
+    answer4: {
+        type: String,
+        required: true,
+    },
 })
 
-module.exports = Turtle
+
+module.exports = Test

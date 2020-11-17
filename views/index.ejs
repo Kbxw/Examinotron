@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="blogs content">
+    <% if (tests.length > 0) { %>
+      <% tests.forEach(test => { %>
+        <b><%= test.question %></b>
+        <ol>
+        <li><i><%= test.answer1 %></i></li>
+        <li><i><%= test.answer2 %></i></li>
+        <li><i><%= test.answer3 %></i></li>
+        <li><i><%= test.answer4 %></i></li>
+        </ol>
+      <% }) %>
+    <% } else { %>
+      <p>¡No hay tests!</p>
+    <% } %>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

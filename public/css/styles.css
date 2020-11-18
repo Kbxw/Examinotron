@@ -64,13 +64,11 @@
     }
     .create-blog input,
     .create-blog textarea{
-      display: inline;
       width: 100%;
       margin: 5px;
       padding: 10px;
     }
     .create-blog label{
-      display: inline;
       margin-top: 30px;
     }
     textarea{

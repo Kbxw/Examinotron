@@ -3,7 +3,7 @@
       max-width: 1200px;
       margin: 20px auto;
       padding: 0 20px;
-      font-family: 'Noto Serif', serif;
+      font-family: "Times New Roman", Times, serif;
       max-width: 1200px;
     }
     p, h1, h2, h3, a, ul{
@@ -35,11 +35,11 @@
       font-size: 3em;
     }
     nav p, nav a{
-      color: #777;
-      font-weight: 300;
+      color: cornflowerblue;
+      font-weight: 150;
     }
     footer{
-      color: #777;
+      color: cornflowerblue;
       text-align: center;
       margin: 80px auto 20px;
     }

@@ -8,6 +8,7 @@ router.post('/tests', async (req, res) => {
     try {
         await test.save()
         res.status(201).send(Test)
+        res.redirect(307, './')     
     } catch (e) {
         res.status(400).send(e)
     }

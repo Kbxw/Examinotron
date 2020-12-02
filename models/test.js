@@ -10,7 +10,7 @@ const Test = mongoose.model('Test', {
         required: true,
     },
     age: {
-        type: String,
+        type: Number,
         required: true,
     },
     email: {

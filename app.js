@@ -4,8 +4,8 @@ const app = express();
 
 /* { ----------- MODELS & ROUTERS ----------- } */
 require("./db/mongoose");
-const Test = require('./models/test');
-const testRouter = require('./routers/test');
+const User = require('./models/test');
+const userRouter = require('./routers/test');
 
 /* { ----------- PORT ----------- } */
 const port = process.env.PORT || 3000
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 
 /* { ----------- RUTAS WEB ----------- } */
 app.get('/', async (req, res) => {
-    await Test.find({}).then((data) => {
+    await User.find({}).then((data) => {
         res.render('index', { tests: data })
     });
 });
@@ -45,7 +45,7 @@ app.get('/crear', (req, res) => {
 
 /* { ----------- API ROUTING ----------- } */
 // EXAMPLE: app.use('/api', modelRouter)
-app.use('/api', testRouter);
+app.use('/api', userRouter);
 
 /* { ----------- EXPRESS ----------- } */
 app.use((req, res) => {

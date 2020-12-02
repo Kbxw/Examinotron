@@ -1,13 +1,13 @@
 const express = require('express')
-const Test = require('../models/test')
+const User = require('../models/test')
 const router = new express.Router()
 
 router.post('/tests', async (req, res) => {
-    const test = new Test(req.body)
+    const test = new User(req.body)
 
     try {
         await test.save()
-        res.status(201).send(Test)
+        res.status(201).send(User)
         res.redirect(307, './')     
     } catch (e) {
         res.status(400).send(e)
@@ -16,7 +16,7 @@ router.post('/tests', async (req, res) => {
 
 router.get('/tests', async (req, res) => {
     try {
-        const tests = await Test.find({})
+        const tests = await User.find({})
         res.send(tests)
     } catch (e) {
         res.status(500).send()
@@ -27,7 +27,7 @@ router.get('/tests/:id', async (req, res) => {
     const _id = req.params.id
 
     try {
-        const test = await Test.findById(_id)
+        const test = await User.findById(_id)
 
         if (!test) {
             return res.status(404).send()
@@ -49,7 +49,7 @@ router.patch('/tests/:id', async (req, res) => {
     }
 
     try {
-        const test = await Test.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
+        const test = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true })
 
         if (!test) {
             return res.status(404).send()
@@ -63,7 +63,7 @@ router.patch('/tests/:id', async (req, res) => {
 
 router.delete('/tests/:id', async (req, res) => {
     try {
-        const test = await Test.findByIdAndDelete(req.params.id)
+        const test = await User.findByIdAndDelete(req.params.id)
 
         if (!test) {
             res.status(404).send()

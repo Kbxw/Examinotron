@@ -1,23 +1,19 @@
 const mongoose = require('mongoose')
 
 const Test = mongoose.model('Test', {
-    question: {
+    nombre: {
         type: String,
         required: true
     },
-    answer1: {
+    password: {
         type: String,
         required: true,
     },
-    answer2: {
-        type: String,
+    age: {
+        type: int,
         required: true,
     },
-    answer3: {
-        type: String,
-        required: true,
-    },
-    answer4: {
+    email: {
         type: String,
         required: true,
     },

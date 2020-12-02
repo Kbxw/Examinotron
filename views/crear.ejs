@@ -7,22 +7,25 @@
   <div class="blogs content">
     <form action="/api/tests" method="POST">
         <fieldset>
-            <legend>Crea una pregunta</legend><br>
-            <label for="name">Pregunta:</label>
-            <input type="text" name="question" id="question"><br>
-            <label for="type">Respuesta 1:</label>
-            <input type="text" name="answer1" id="answer1"><br>
-            <label for="type">Respuesta 2:</label>
-            <input type="text" name="answer2" id="answer2"><br>
-            <label for="type">Respuesta 3:</label>
-            <input type="text" name="answer3" id="answer3"><br>
-            <label for="type">Respuesta 4:</label>
-            <input type="text" name="answer4" id="answer4"><br>
-            <input type="submit" value="Crear Pregunta">
+            <legend>Crea un usuario</legend><br>
+            <label for="name">Nombre</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="name">Password</label>
+            <input type="text" name="password" id="password"><br>
+            <label for="name">Edad</label>
+            <input type="text" name="age" id="age"><br>
+            <label for="name">Email</label>
+            <input type="number" name="email" id="email"><br>
+            
+            <input type="submit" value="Crear usuario">
         </fieldset>
     </form>
   </div>
-  
+  <script>
+    
+      document.getElementById("age").defaultValue = "0";
+    </script
+    
   <%- include("./partials/footer.ejs") %>
 </body>
 </html>

@@ -1,11 +1,7 @@
 const bcrypt = require('bcryptjs')
 
-const password = '12345'
-
 const getHash = async (password)=>{
-    const hash = await bcrypt.hash(password,8)
-    console.log('hash: ', hash);
-    return hash
+    return await bcrypt.hash(password,8)
 }
 
 const compararPasswordConHash = (password, hash) =>{
